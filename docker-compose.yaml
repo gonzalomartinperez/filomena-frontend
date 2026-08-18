@@ -1,0 +1,19 @@
+services:
+
+  # NextJS: Contenedor principal de la aplicación.
+  nextjs:
+    build:
+      context: .
+      dockerfile: ./docker/Dockerfile
+      target: runner
+    restart: unless-stopped
+    env_file:
+      - .env
+    ports:
+      - "${PORT:-3000}:${PORT:-3000}"
+    healthcheck:
+      test: ['CMD', 'node', '-e', "fetch('http://127.0.0.1:'+(process.env.PORT||3000)+'/').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"]
+      interval: 30s
+      timeout: 10s
+      retries: 10
+      start_period: 5s

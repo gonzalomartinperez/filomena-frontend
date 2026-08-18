@@ -1,0 +1,19 @@
+@import 'tailwindcss';
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Oculta icono nativa de Edge para revelar contraseña */
+input[type='password']::-ms-reveal {
+  display: none;
+}
+
+/* Oculta icono nativa de Chrome para revelar contraseña */
+input[type='password']::-webkit-credentials-auto-fill-button {
+  display: none;
+  visibility: hidden;
+}

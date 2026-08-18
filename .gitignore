@@ -1,0 +1,25 @@
+# Dependencias de Node
+/node_modules/
+
+# Archivos de entorno
+.env
+
+# Archivos generados por Next.js
+/.next/
+/out/
+/.vercel/
+
+# Logs
+*.log
+
+# Cachés y archivos temporales
+*.tmp
+*.temp
+.tailwind-cache
+
+# Configuración de VS Code
+.vscode/
+
+# Archivos del sistema (Windows/macOS)
+.DS_Store
+Thumbs.db
