@@ -32,7 +32,7 @@
     "@fortawesome/react-fontawesome": "^3.1.1",
     "@radix-ui/react-dialog": "^1.1.15",
     "@radix-ui/react-tooltip": "^1.2.8",
-    "axios": "^1.13.2",
+    "axios": "^1.20.0",
     "dayjs": "^1.11.19",
     "formik": "^2.4.9",
     "fuse.js": "^7.1.0",
