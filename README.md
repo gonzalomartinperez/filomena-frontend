@@ -69,7 +69,7 @@ flowchart LR
     N --> UI[Role-based workspaces]
     UI --> A[Axios API client]
     A --> B[Laravel REST API]
-    B --> M[(MariaDB / MySQL)]
+    B --> M[("MariaDB — final choice")]
     B --> R[(Redis cache and queues)]
     B --> O[Prometheus metrics]
     O --> G[Grafana dashboards]
@@ -82,6 +82,8 @@ flowchart LR
 </details>
 
 This repository is the Next.js client. Authentication, authorization, tenant isolation, persistence, and authoritative exam state belong to the backend. Client-side route and role guards improve the user experience; they are not treated as the security boundary.
+
+Database history: the project used both MySQL and MariaDB during its development; MariaDB was the final relational database selection. The diagrams show that final choice. [MySQL Community Edition](https://www.mysql.com/products/community/) is open source under the GPL, and [MariaDB Server](https://mariadb.org/about/) is open source under GPLv2.
 
 ## Frontend engineering
 

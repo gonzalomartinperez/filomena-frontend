@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="890" viewBox="0 0 1200 890" role="img" aria-labelledby="title desc">
-<title id="title">Filomena frontend: historical architecture overview</title><desc id="desc">Historical Filomena frontend: administrator, student and evaluator workspaces share the Next.js client and Axios API client. The Laravel API, not browser guards, enforces authentication, permissions and institution boundaries. MariaDB or MySQL and Redis support the platform; Prometheus feeds Grafana.</desc>
+<title id="title">Filomena frontend: historical architecture overview</title><desc id="desc">Historical Filomena frontend: administrator, student and evaluator workspaces share the Next.js client and Axios API client. The Laravel API, not browser guards, enforces authentication, permissions and institution boundaries. MariaDB was the final relational database choice, following earlier MySQL use; Redis supports caching and queues; Prometheus feeds Grafana.</desc>
 <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M1 1 L7 4 L1 7" fill="none" stroke="#60738C" stroke-width="1.5"/></marker></defs>
 <rect width="1200" height="890" rx="24" fill="#F7F9FC"/>
 <style>text{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#132238}.eyebrow{font-size:13px;font-weight:700;letter-spacing:1.4px;fill:#006C66}.title{font-size:32px;font-weight:750;letter-spacing:-.6px}.body{font-size:16px;fill:#40526B}.label{font-size:19px;font-weight:700}.small{font-size:14px;fill:#40526B}.section{font-size:13px;font-weight:700;letter-spacing:1px;fill:#40526B}.edge{fill:none;stroke:#60738C;stroke-width:2;marker-end:url(#arrow)}</style>
@@ -39,7 +39,7 @@
 <text x="842" y="344" class="body">Server-side validation</text>
 <rect x="820" y="490" width="340" height="116" rx="16" fill="#FFFFFF" stroke="#60738C" stroke-width="1"/><rect x="820" y="508" width="4" height="80" rx="2" fill="#006C66"/>
 <text x="842" y="524" class="label">Platform persistence</text>
-<text x="842" y="552" class="body">MariaDB / MySQL</text>
+<text x="842" y="552" class="body">MariaDB (final choice)</text>
 <text x="842" y="576" class="body">Redis cache and queues</text>
 <path d="M350 268 H388 V548 H350 M350 408 H388" fill="none" stroke="#60738C" stroke-width="2"/>
 <path d="M388 314 H430" class="edge"/>
