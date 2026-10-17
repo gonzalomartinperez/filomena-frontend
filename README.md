@@ -53,6 +53,16 @@ The platform combines role-specific live progress with infrastructure observabil
 
 ## Architecture
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/diagrams/architecture-dark.svg">
+  <img src="docs/diagrams/architecture-light.svg" alt="Filomena frontend historical architecture: three role-focused workspaces share the Next.js client; the Laravel API owns enforcement and persistent exam state" width="1200">
+</picture>
+
+The overview groups responsibilities in the published implementation. The editable logical view below retains the detailed relationships; neither view changes the historical architecture. [Diagram source and maintenance](docs/diagrams/README.md).
+
+<details>
+<summary>Detailed logical view · editable Mermaid</summary>
+
 ```mermaid
 flowchart LR
     U[Browser] --> N[Next.js App Router]
@@ -68,6 +78,8 @@ flowchart LR
     UI --> STU[Student]
     UI --> EVA[Evaluator]
 ```
+
+</details>
 
 This repository is the Next.js client. Authentication, authorization, tenant isolation, persistence, and authoritative exam state belong to the backend. Client-side route and role guards improve the user experience; they are not treated as the security boundary.
 

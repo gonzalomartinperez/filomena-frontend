@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="890" viewBox="0 0 1200 890" role="img" aria-labelledby="title desc">
+<title id="title">Filomena frontend: historical architecture overview</title><desc id="desc">Historical Filomena frontend: administrator, student and evaluator workspaces share the Next.js client and Axios API client. The Laravel API, not browser guards, enforces authentication, permissions and institution boundaries. MariaDB or MySQL and Redis support the platform; Prometheus feeds Grafana.</desc>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M1 1 L7 4 L1 7" fill="none" stroke="#91A5C0" stroke-width="1.5"/></marker></defs>
+<rect width="1200" height="890" rx="24" fill="#0B1220"/>
+<style>text{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#EDF3FF}.eyebrow{font-size:13px;font-weight:700;letter-spacing:1.4px;fill:#64D8CE}.title{font-size:32px;font-weight:750;letter-spacing:-.6px}.body{font-size:16px;fill:#B0C0D6}.label{font-size:19px;font-weight:700}.small{font-size:14px;fill:#B0C0D6}.section{font-size:13px;font-weight:700;letter-spacing:1px;fill:#B0C0D6}.edge{fill:none;stroke:#91A5C0;stroke-width:2;marker-end:url(#arrow)}</style>
+<text x="40" y="40" class="eyebrow">FILOMENA / FRONTEND</text>
+<text x="40" y="88" class="title">One exam. Three focused workspaces.</text>
+<text x="40" y="122" class="small">Historical implementation · Public portfolio snapshot · Not a current deployment assessment</text>
+<text x="40" y="186" class="section">01 / ROLE-FOCUSED EXPERIENCE</text>
+<text x="430" y="186" class="section">02 / SHARED CLIENT</text>
+<text x="820" y="186" class="section">03 / BACKEND AUTHORITY</text>
+<rect x="40" y="210" width="310" height="116" rx="16" fill="#111D2E" stroke="#91A5C0" stroke-width="1"/><rect x="40" y="228" width="4" height="80" rx="2" fill="#64D8CE"/>
+<text x="62" y="244" class="label">Administrator</text>
+<text x="62" y="272" class="body">Configure exams and users</text>
+<text x="62" y="296" class="body">Monitor progress and reports</text>
+<rect x="40" y="350" width="310" height="116" rx="16" fill="#111D2E" stroke="#91A5C0" stroke-width="1"/><rect x="40" y="368" width="4" height="80" rx="2" fill="#64D8CE"/>
+<text x="62" y="384" class="label">Student</text>
+<text x="62" y="412" class="body">Cases, media and answers</text>
+<text x="62" y="436" class="body">Progress and deliberate submit</text>
+<rect x="40" y="490" width="310" height="116" rx="16" fill="#111D2E" stroke="#91A5C0" stroke-width="1"/><rect x="40" y="508" width="4" height="80" rx="2" fill="#64D8CE"/>
+<text x="62" y="524" class="label">Evaluator</text>
+<text x="62" y="552" class="body">Pseudonymous submissions</text>
+<text x="62" y="576" class="body">Checklists and corrections</text>
+<rect x="430" y="210" width="310" height="208" rx="16" fill="#111D2E" stroke="#91A5C0" stroke-width="1"/><rect x="430" y="228" width="4" height="172" rx="2" fill="#64D8CE"/>
+<text x="452" y="244" class="label">Next.js + React</text>
+<text x="452" y="272" class="body">App Router / TypeScript</text>
+<text x="452" y="296" class="body">Role-aware workspaces</text>
+<text x="452" y="320" class="body">Session orchestration</text>
+<text x="452" y="344" class="body">Browser guards: UX only</text>
+<rect x="430" y="490" width="310" height="116" rx="16" fill="#111D2E" stroke="#91A5C0" stroke-width="1"/><rect x="430" y="508" width="4" height="80" rx="2" fill="#64D8CE"/>
+<text x="452" y="524" class="label">Axios API client</text>
+<text x="452" y="552" class="body">Central credentials / XSRF</text>
+<text x="452" y="576" class="body">Normalized API feedback</text>
+<rect x="820" y="210" width="340" height="208" rx="16" fill="#111D2E" stroke="#91A5C0" stroke-width="1"/><rect x="820" y="228" width="4" height="172" rx="2" fill="#64D8CE"/>
+<text x="842" y="244" class="label">Laravel REST API</text>
+<text x="842" y="272" class="body">Authentication and permissions</text>
+<text x="842" y="296" class="body">Institution boundaries</text>
+<text x="842" y="320" class="body">Authoritative exam state</text>
+<text x="842" y="344" class="body">Server-side validation</text>
+<rect x="820" y="490" width="340" height="116" rx="16" fill="#111D2E" stroke="#91A5C0" stroke-width="1"/><rect x="820" y="508" width="4" height="80" rx="2" fill="#64D8CE"/>
+<text x="842" y="524" class="label">Platform persistence</text>
+<text x="842" y="552" class="body">MariaDB / MySQL</text>
+<text x="842" y="576" class="body">Redis cache and queues</text>
+<path d="M350 268 H388 V548 H350 M350 408 H388" fill="none" stroke="#91A5C0" stroke-width="2"/>
+<path d="M388 314 H430" class="edge"/>
+<path d="M585 418 V490" class="edge"/>
+<path d="M740 548 H780 V314 H820" class="edge"/>
+<path d="M990 418 V490" class="edge"/>
+<rect x="802" y="194" width="374" height="430" rx="22" fill="none" stroke="#B8A3FF" stroke-width="2" stroke-dasharray="7 6"/>
+<text x="822" y="650" class="small">Dashed boundary: server-owned enforcement</text>
+<rect x="40" y="700" width="1120" height="112" rx="16" fill="#111D2E" stroke="#91A5C0" stroke-width="1"/><rect x="40" y="718" width="4" height="76" rx="2" fill="#B8A3FF"/>
+<text x="62" y="734" class="label">Platform observability</text>
+<text x="62" y="762" class="body">Laravel metrics → Prometheus → Grafana dashboards</text>
+<text x="40" y="850" class="small">Reading guide: solid arrows = application flow; monitoring summarizes the platform, not browser telemetry.</text>
+</svg>
