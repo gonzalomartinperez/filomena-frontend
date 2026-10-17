@@ -83,7 +83,7 @@ flowchart LR
 
 This repository is the Next.js client. Authentication, authorization, tenant isolation, persistence, and authoritative exam state belong to the backend. Client-side route and role guards improve the user experience; they are not treated as the security boundary.
 
-Database history: the project used both MySQL and MariaDB during its development; MariaDB was the final relational database selection. The diagrams show that final choice. [MySQL Community Edition](https://www.mysql.com/products/community/) is open source under the GPL, and [MariaDB Server](https://mariadb.org/about/) is open source under GPLv2.
+Database history: the project used both MySQL and MariaDB during its development; MariaDB was the final relational database selection. The team chose MariaDB Server as a community, open-source foundation that met Filomena's requirements without depending on commercial features. The diagrams show that final choice. [MySQL Community Edition](https://www.mysql.com/products/community/) is open source under the GPL, and [MariaDB Server](https://mariadb.org/about/) is open source under GPLv2.
 
 ## Frontend engineering
 
