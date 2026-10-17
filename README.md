@@ -69,7 +69,7 @@ flowchart LR
     N --> UI[Role-based workspaces]
     UI --> A[Axios API client]
     A --> B[Laravel REST API]
-    B --> M[(MariaDB / MySQL)]
+    B --> M[("MariaDB — final choice")]
     B --> R[(Redis cache and queues)]
     B --> O[Prometheus metrics]
     O --> G[Grafana dashboards]
@@ -82,6 +82,8 @@ flowchart LR
 </details>
 
 This repository is the Next.js client. Authentication, authorization, tenant isolation, persistence, and authoritative exam state belong to the backend. Client-side route and role guards improve the user experience; they are not treated as the security boundary.
+
+Database history: the project used both MySQL and MariaDB during its development; MariaDB was the final relational database selection. The team chose MariaDB Server as a community, open-source foundation that met Filomena's requirements without depending on commercial features. The diagrams show that final choice. [MySQL Community Edition](https://www.mysql.com/products/community/) is open source under the GPL, and [MariaDB Server](https://mariadb.org/about/) is open source under GPLv2.
 
 ## Frontend engineering
 
@@ -193,4 +195,4 @@ The source is published for technical evaluation and portfolio review. No open-s
 
 ## Maintenance and security
 
-This is an owner-maintained portfolio reference, not a community support service. See [CONTRIBUTING.md](CONTRIBUTING.md) for scope and validation, and [SECURITY.md](SECURITY.md) for private reporting and safe handling of institutional data. Dependency changes require manual review; an open update PR is not evidence that the snapshot has been upgraded or verified.
+This is an owner-maintained portfolio reference, not a community support service. See [CONTRIBUTING.md](CONTRIBUTING.md) for scope and validation, and [SECURITY.md](SECURITY.md) for private reporting and safe handling of institutional data. The application source and dependencies are preserved as a historical university-project snapshot, with no automatic dependency maintenance or routine upgrade program. `develop` is retained for documentation corrections through reviewed PRs into `main`; the two branches are kept synchronized after promotion. Historical dependencies may have known security advisories; the snapshot is not a current deployment recommendation.
