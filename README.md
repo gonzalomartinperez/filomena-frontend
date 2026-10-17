@@ -2,10 +2,12 @@
 
 **A production health-sciences exam experience built for high-stakes, multi-role workflows.** Filomena turns exam design, delivery, evaluation, and live operations into one web platform used by five Argentine national institutions.
 
-[![Next.js 16.3.1](https://img.shields.io/badge/Next.js-16.3.1-000000?logo=nextdotjs&logoColor=white)](https://nextjs.org/)
-[![React 19](https://img.shields.io/badge/React-19.2-20232A?logo=react&logoColor=61DAFB)](https://react.dev/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-[![Docker](https://img.shields.io/badge/Docker-ready-2496ED?logo=docker&logoColor=white)](https://www.docker.com/)
+Historical public snapshot, maintained by Gonzalo Martin Perez as technical portfolio evidence. Versions and delivery configuration describe the published implementation.
+
+[![Next.js 16.3.1](https://img.shields.io/badge/Next.js-16.3.1-000000?style=flat-square&logo=nextdotjs&logoColor=white)](https://nextjs.org/)
+[![React 19](https://img.shields.io/badge/React-19.2-20232A?style=flat-square&logo=react&logoColor=61DAFB)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Docker](https://img.shields.io/badge/Docker-ready-2496ED?style=flat-square&logo=docker&logoColor=white)](https://www.docker.com/)
 
 | Verified platform outcome                        |      Result |
 | ------------------------------------------------ | ----------: |
@@ -57,7 +59,7 @@ flowchart LR
     N --> UI[Role-based workspaces]
     UI --> A[Axios API client]
     A --> B[Laravel REST API]
-    B --> M[(MySQL)]
+    B --> M[(MariaDB / MySQL)]
     B --> R[(Redis cache and queues)]
     B --> O[Prometheus metrics]
     O --> G[Grafana dashboards]
@@ -137,7 +139,7 @@ npm run lint
 npm run build
 ```
 
-The clean install reports zero known npm vulnerabilities, ESLint validates the complete source tree, and the production build includes TypeScript validation. The repository does not claim an automated frontend test suite that is not present.
+Run the audit against the current advisory database; an earlier clean install is not a permanent security guarantee. ESLint checks the source tree, and the production build includes TypeScript validation. The public snapshot does not include an automated frontend test suite. These commands describe available checks, not newly executed results.
 
 ## Docker
 
@@ -146,7 +148,9 @@ cp .env.example.docker .env
 ./run.sh prod --build
 ```
 
-The image uses Next.js standalone output and runs as a non-root user. `run.sh off` stops the stack; `run.sh reset` removes only this Compose project's containers, networks, and volumes.
+The image uses Next.js standalone output and runs as a non-root user. The script changes `.env` and stops the named development and production projects before starting the selected mode; it is not a zero-downtime deployment command. Use a distinct `COMPOSE_PROJECT_NAME` and available local port.
+
+`./run.sh off` stops both named modes while retaining volumes. `./run.sh reset` also deletes their volumes and orphan containers: use it only for disposable local data. The published port is not restricted to loopback in the Compose file; review host exposure before starting. Neither the `prod` argument nor the historical Docker configuration constitutes a current production-readiness assessment.
 
 ## Public-snapshot boundaries
 
@@ -174,3 +178,7 @@ The modernization replaced a CakePHP + jQuery monolith with a Laravel REST API a
 Filomena v2 was built as a **three-person engineering capstone**, and the product remains a team achievement. This public repository is maintained by **Gonzalo Martin Perez** as verifiable portfolio evidence. His documented project scope spans architecture through production deployment, including the API-first modernization, the Next.js/TypeScript frontend, performance work, deployment automation, observability, and production safeguards described above.
 
 The source is published for technical evaluation and portfolio review. No open-source license has been added; absence of a license does not grant reuse or redistribution rights.
+
+## Maintenance and security
+
+This is an owner-maintained portfolio reference, not a community support service. See [CONTRIBUTING.md](CONTRIBUTING.md) for scope and validation, and [SECURITY.md](SECURITY.md) for private reporting and safe handling of institutional data. Dependency changes require manual review; an open update PR is not evidence that the snapshot has been upgraded or verified.

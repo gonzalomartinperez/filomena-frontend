@@ -15,4 +15,4 @@ Frontend role and route guards improve the user experience but are not a securit
 
 ## Reporting a vulnerability
 
-Do not publish exploit details, credentials, personal data, or institutional information in a public issue. Use GitHub's private vulnerability reporting channel when it is available for this repository.
+Do not publish exploit details, credentials, personal data, or institutional information in a public issue. Use GitHub's private vulnerability reporting channel if it is enabled. If it is unavailable, use the contact details published on the [maintainer's GitHub profile](https://github.com/gonzalomartinperez) to arrange a private channel; keep the initial message free of sensitive details. No response-time commitment or supported-version security maintenance schedule is published for this historical snapshot.
