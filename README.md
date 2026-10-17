@@ -53,10 +53,12 @@ The platform combines role-specific live progress with infrastructure observabil
 
 ## Architecture
 
+<p align="center">
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="docs/diagrams/architecture-dark.svg">
   <img src="docs/diagrams/architecture-light.svg" alt="Filomena frontend historical architecture: three role-focused workspaces share the Next.js client; the Laravel API owns enforcement and persistent exam state" width="1200">
 </picture>
+</p>
 
 The overview groups responsibilities in the published implementation. The editable logical view below retains the detailed relationships; neither view changes the historical architecture. [Diagram source and maintenance](docs/diagrams/README.md).
 
